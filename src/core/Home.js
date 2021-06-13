@@ -1,10 +1,11 @@
 import React from 'react';
 import '../styles.css';
+import Base from './Base';
 const Home = () => {
   return (
-    <div>
+    <Base>
       <h1 className="text-white"> homepage </h1>
-    </div>
+    </Base>
   );
 };
 export default Home;
