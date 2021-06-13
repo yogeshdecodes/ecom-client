@@ -1,9 +1,10 @@
 import React from 'react';
-
-export default function Home() {
+import '../styles.css';
+const Home = () => {
   return (
     <div>
-      <h1>Hello home</h1>
+      <h1 className="text-white"> homepage </h1>
     </div>
   );
-}
+};
+export default Home;
