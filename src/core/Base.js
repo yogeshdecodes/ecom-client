@@ -2,8 +2,8 @@ import React from 'react';
 import Menu from './Menu';
 
 const Base = ({
-  title = 'my title',
-  description = 'mu',
+  title = 'default title',
+  description = 'defalt description',
   className = 'bg-dark text-white p-4',
   children,
 }) => {
