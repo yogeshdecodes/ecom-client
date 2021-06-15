@@ -17,7 +17,7 @@ const Base = ({
           <div className={className}>{children}</div>
         </div>
       </div>
-      <footer class="footer bg-dark mt-auto py">
+      <footer className="footer bg-dark mt-auto py">
         <div className="container-fluid bg-success text-white text-center">
           <h4>If you have question plaese reach out</h4>
           <button className="btn btn-warning btn-lg">contact-us</button>

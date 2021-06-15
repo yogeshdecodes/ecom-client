@@ -8,7 +8,7 @@ const Signup = () => {
     name: '',
     email: '',
     password: '',
-    error: [],
+    error: '',
     success: false,
   });
 
@@ -37,7 +37,7 @@ const Signup = () => {
           });
         }
       })
-      .catch(console.log('Error in signin'));
+      .catch(console.log('Error in signup'));
   };
 
   const signupForm = () => {
