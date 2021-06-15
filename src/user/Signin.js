@@ -23,7 +23,6 @@ const Signin = () => {
   };
   return (
     <Base title="signup page" description="A page for user signin">
-      <h1>Signin page</h1>
       {signinForm()}
     </Base>
   );

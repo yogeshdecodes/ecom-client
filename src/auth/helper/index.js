@@ -1,9 +1,10 @@
-import { API } from '../../../backend';
+import { API } from '../../backend';
 
 export const signup = (user) => {
+  console.log(JSON.stringify(user));
   return fetch(`${API}/signup`, {
     method: 'POST',
-    header: {
+    headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
@@ -12,13 +13,13 @@ export const signup = (user) => {
     .then((response) => {
       return response.json();
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.log('hello there', err));
 };
 
 export const signin = (user) => {
   return fetch(`${API}/signin`, {
     method: 'POST',
-    header: {
+    headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },

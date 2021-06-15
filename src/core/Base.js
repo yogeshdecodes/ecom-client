@@ -14,8 +14,8 @@ const Base = ({
         <div className="jumbotron bg-dark text-white text-center">
           <h2>{title}</h2>
           <p>{description}</p>
+          <div className={className}>{children}</div>
         </div>
-        <div className={className}>{children}</div>
       </div>
       <footer class="footer bg-dark mt-auto py">
         <div className="container-fluid bg-success text-white text-center">
