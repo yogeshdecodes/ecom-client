@@ -27,15 +27,17 @@ const Menu = ({ history }) => {
             Cart
           </Link>
         </li>
-        <li className="nav-item">
-          <Link
-            style={activeTab(history, '/user/dashboard')}
-            className="nav-link"
-            to="/user/dashboard"
-          >
-            User Dasboard
-          </Link>
-        </li>
+        {isAuthenticated() && isAuthenticated().user.role === 0 && (
+          <li className="nav-item">
+            <Link
+              style={activeTab(history, '/user/dashboard')}
+              className="nav-link"
+              to="/user/dashboard"
+            >
+              User Dasboard
+            </Link>
+          </li>
+        )}
         {isAuthenticated() && isAuthenticated().user.role === 1 && (
           <li className="nav-item">
             <Link
