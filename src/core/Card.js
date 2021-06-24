@@ -19,7 +19,7 @@ const Card = ({
   const cartPrice = product ? product.price : 'DEFAULT';
 
   const addToCart = () => {
-    // addItemToCart(product, () => setRedirect(true));
+    addItemToCart(product, () => setRedirect(true));
   };
 
   const getARedirect = (redirect) => {
