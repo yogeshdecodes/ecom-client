@@ -6,10 +6,10 @@ import {
   getProduct,
   updateProduct,
 } from './helper/adminapicall';
-import { isAutheticated } from '../auth/helper/index';
+import { isAuthenticated } from '../auth/helper/index';
 
 const UpdateProduct = ({ match }) => {
-  const { user, token } = isAutheticated();
+  const { user, token } = isAuthenticated();
 
   const [values, setValues] = useState({
     name: '',
