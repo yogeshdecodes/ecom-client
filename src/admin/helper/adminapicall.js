@@ -74,6 +74,7 @@ export const updateProduct = (productId, userId, token, product) => {
       Accept: 'application/json',
       Authorization: `Bearer ${token}`,
     },
+    body: product,
   })
     .then((response) => {
       return response.json();

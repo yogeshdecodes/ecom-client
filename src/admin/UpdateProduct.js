@@ -81,7 +81,7 @@ const UpdateProduct = ({ match }) => {
   const onSubmit = (event) => {
     event.preventDefault();
     setValues({ ...values, error: '', loading: true });
-
+    console.table(match.params.productId, user._id, token);
     updateProduct(match.params.productId, user._id, token, formData).then(
       (data) => {
         if (data.error) {
@@ -117,6 +117,14 @@ const UpdateProduct = ({ match }) => {
     </div>
   );
 
+  const errorMessage = () => (
+    <div
+      className="alert alert-success mt-3"
+      style={{ display: error ? '' : 'none' }}
+    >
+      <h4>{createdProduct} updated successfully</h4>
+    </div>
+  );
   const createProductForm = () => (
     <form>
       <span>Post photo</span>
@@ -205,6 +213,7 @@ const UpdateProduct = ({ match }) => {
       <div className="row bg-dark text-white rounded">
         <div className="col-md-8 offset-md-2">
           {successMessage()}
+          {errorMessage()}
           {createProductForm()}
         </div>
       </div>
