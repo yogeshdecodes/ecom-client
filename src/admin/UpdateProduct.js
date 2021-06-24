@@ -77,11 +77,9 @@ const UpdateProduct = ({ match }) => {
     preload(match.params.productId);
   }, []);
 
-  //TODO: work on it
   const onSubmit = (event) => {
     event.preventDefault();
     setValues({ ...values, error: '', loading: true });
-    console.table(match.params.productId, user._id, token);
     updateProduct(match.params.productId, user._id, token, formData).then(
       (data) => {
         if (data.error) {
