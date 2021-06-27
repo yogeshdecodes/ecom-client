@@ -25,17 +25,75 @@ export default function Home() {
 
   return (
     <Base title="Home Page" description="Welcome to the Tshirt Store">
-      <div className="row text-center">
+      <div className="col text-center">
         <h1 className="text-white">All of tshirts</h1>
-        <div className="row">
-          {products.map((product, index) => {
+      </div>
+      <div className="row">
+        {products.length ? (
+          products.map((product, index) => {
             return (
               <div key={index} className="col-4 mb-4">
                 <Card product={product} />
               </div>
             );
-          })}
-        </div>
+          })
+        ) : (
+          <div className="container mt-5 mb-5">
+            <div className="row">
+              <div className="col-md-4">
+                <div class="ph-item">
+                  <div class="ph-col-12">
+                    <div class="ph-picture"></div>
+                    <div class="ph-row">
+                      <div class="ph-col-6 big"></div>
+                      <div class="ph-col-4 empty big"></div>
+                      <div class="ph-col-2 big"></div>
+                      <div class="ph-col-4"></div>
+                      <div class="ph-col-8 empty"></div>
+                      <div class="ph-col-6"></div>
+                      <div class="ph-col-6 empty"></div>
+                      <div class="ph-col-12"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div class="ph-item">
+                  <div class="ph-col-12">
+                    <div class="ph-picture"></div>
+                    <div class="ph-row">
+                      <div class="ph-col-6 big"></div>
+                      <div class="ph-col-4 empty big"></div>
+                      <div class="ph-col-2 big"></div>
+                      <div class="ph-col-4"></div>
+                      <div class="ph-col-8 empty"></div>
+                      <div class="ph-col-6"></div>
+                      <div class="ph-col-6 empty"></div>
+                      <div class="ph-col-12"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div class="ph-item">
+                  <div class="ph-col-12">
+                    <div class="ph-picture"></div>
+                    <div class="ph-row">
+                      <div class="ph-col-6 big"></div>
+                      <div class="ph-col-4 empty big"></div>
+                      <div class="ph-col-2 big"></div>
+                      <div class="ph-col-4"></div>
+                      <div class="ph-col-8 empty"></div>
+                      <div class="ph-col-6"></div>
+                      <div class="ph-col-6 empty"></div>
+                      <div class="ph-col-12"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </Base>
   );
