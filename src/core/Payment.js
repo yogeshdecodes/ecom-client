@@ -25,15 +25,16 @@ const Payment = ({ products, setReload = (f) => f, reload = undefined }) => {
         setInfo({ ...info, error: info.error });
       } else {
         const clientToken = info.clientToken;
-        setInfo({ clientToken });
+        setInfo({ ...info, clientToken: clientToken });
       }
     });
   };
 
   const showbtdropIn = () => {
+    console.log('befordropin', info);
     return (
       <div>
-        {info.clientToken !== null && products.length > 0 ? (
+        {info.clientToken !== null && products?.length > 0 ? (
           <div>
             <DropIn
               options={{ authorization: info.clientToken }}
@@ -66,7 +67,7 @@ const Payment = ({ products, setReload = (f) => f, reload = undefined }) => {
       processPayment(userId, token, paymentData)
         .then((response) => {
           setInfo({ ...info, success: response.success, loading: false });
-          console.log('PAYMENT SUCCESS');
+          console.log('PAYMENT SUCCESS', response);
           const orderData = {
             products: products,
             transaction_id: response.transaction.id,
@@ -88,12 +89,11 @@ const Payment = ({ products, setReload = (f) => f, reload = undefined }) => {
 
   const getAmount = () => {
     let amount = 0;
-    products.map((p) => {
+    products?.map((p) => {
       amount = amount + p.price;
     });
     return amount;
   };
-
   return (
     <div>
       <h3>Your bill is {getAmount()} $</h3>

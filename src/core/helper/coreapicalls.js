@@ -9,7 +9,6 @@ export const getProducts = () => {
 };
 
 export const getImage = (product) => {
-  console.log(product._id);
   return fetch(`${API}/product/photo/${product._id}`, {
     method: 'GET',
   })

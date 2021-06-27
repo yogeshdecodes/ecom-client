@@ -43,7 +43,7 @@ const Cart = () => {
     <Base title="Cart Page" description="Ready to checkout">
       <div className="row text-center">
         <div className="col-6">
-          {products.length > 0 ? (
+          {products?.length > 0 ? (
             loadAllProducts(products)
           ) : (
             <h4>No products</h4>
