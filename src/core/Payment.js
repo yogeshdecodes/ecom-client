@@ -68,8 +68,8 @@ const Payment = ({ products, setReload = (f) => f, reload = undefined }) => {
           setInfo({ ...info, success: response.success, loading: false });
           console.log('PAYMENT SUCCESS');
           const orderData = {
-            product: products,
-            transtion_id: response.transaction.id,
+            products: products,
+            transaction_id: response.transaction.id,
             amount: response.transaction.amount,
           };
           createOrder(userId, token, orderData);
