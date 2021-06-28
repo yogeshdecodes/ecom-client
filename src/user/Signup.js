@@ -46,7 +46,7 @@ const Signup = () => {
         <div className="col-md-6 offset-sm-3 text-left">
           <form>
             <div className="form-group">
-              <label className="text-light">Name</label>
+              <label>Name</label>
               <input
                 className="form-control"
                 onChange={handleChange('name')}
@@ -55,7 +55,7 @@ const Signup = () => {
               />
             </div>
             <div className="form-group">
-              <label className="text-light">Email</label>
+              <label>Email</label>
 
               <input
                 className="form-control"

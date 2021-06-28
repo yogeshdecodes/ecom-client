@@ -19,7 +19,7 @@ const Base = ({
       </div>
       <footer className="footer mt-auto py">
         <div className="container-fluid bg-success text-white text-center">
-          <h4>If you have question plaese reach out</h4>
+          <h4>If you have question please reach out</h4>
           <button className="btn btn-warning btn-lg">contact-us</button>
         </div>
       </footer>
