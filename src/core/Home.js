@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <Base title="Home Page" description="Welcome to the Tshirt Store">
       <div className="col text-center">
-        <h1 className="text-white">All of tshirts</h1>
+        <h1 className="text-dark">All of tshirts</h1>
       </div>
       <div className="row">
         {products.length ? (
